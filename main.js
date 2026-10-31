@@ -363,12 +363,13 @@
     /* ---------- 00 HERO: zoom into the lens ---------- */
     const photo = $('.hero-photo');
     const zoom = { s: 1 };
-    const R0 = 20.2; // rayon du verre en vmin
     const vmin = () => Math.min(innerWidth, innerHeight) / 100;
-    const sEnd = () => (Math.hypot(innerWidth, innerHeight) / 2) / (R0 * vmin()) * 1.04;
+    // rayon du verre en vmin, déduit de la taille réelle de l'objectif (variable CSS --lens)
+    const glassR = () => (lens.clientWidth * 50.5 / 260) / vmin();
+    const sEnd = () => (Math.hypot(innerWidth, innerHeight) / 2) / (glassR() * vmin()) * 1.04;
     const renderZoom = () => {
       lens.style.transform = `scale(${zoom.s})`;
-      photo.style.clipPath = `circle(${(R0 * zoom.s).toFixed(3)}vmin at 50% 50%)`;
+      photo.style.clipPath = `circle(${(glassR() * zoom.s).toFixed(3)}vmin at 50% 50%)`;
     };
 
     const heroTl = gsap.timeline({

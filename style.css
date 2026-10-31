@@ -179,11 +179,11 @@ h2 {
 /* =========================================================
    HERO / LENS
    ========================================================= */
-.hero { position: relative; height: 100vh; overflow: hidden; background: var(--bg); }
+.hero { --lens: 104vmin; position: relative; height: 100vh; overflow: hidden; background: var(--bg); }
 
 .hero-photo {
   position: absolute; inset: 0;
-  clip-path: circle(20.2vmin at 50% 50%);
+  clip-path: circle(calc(var(--lens) * .1942) at 50% 50%);
   opacity: 0;
 }
 .hero-photo-inner { position: absolute; inset: 0; transform: scale(1.5); will-change: transform; }
@@ -198,7 +198,7 @@ h2 {
 
 .lens {
   position: absolute; left: 50%; top: 50%;
-  width: 104vmin; height: 104vmin; margin: -52vmin 0 0 -52vmin;
+  width: var(--lens); height: var(--lens); margin: calc(var(--lens) / -2) 0 0 calc(var(--lens) / -2);
   overflow: visible; transform-origin: 50% 50%;
 }
 .lens-type { fill: #d9d3c8; font-family: var(--mono); letter-spacing: .5px; opacity: .85; }
@@ -242,12 +242,16 @@ h2 {
 .hero-title p { margin-top: 28px; color: var(--fg); opacity: 0; }
 
 @media (min-aspect-ratio: 5/4) {
+  /* l'objectif rétrécit sur les écrans peu larges (4:3, 3:2) pour laisser la place au nom de chaque côté */
+  .hero { --lens: min(104vmin, calc((64vw - 120px) * 1.083)); }
   .hero-eyebrow {
     top: calc(50% + clamp(44px, 5.6vw, 110px) * .7); left: var(--gut); transform: none;
     flex-direction: column; gap: 6px;
   }
   .scroll-hint {
     bottom: auto; top: calc(50% + clamp(44px, 5.6vw, 110px) * .7); left: auto; right: var(--gut); transform: none;
+    white-space: normal; text-align: right; justify-content: flex-end; line-height: 1.6;
+    max-width: min(320px, calc(50vw - var(--lens) * .4615 - var(--gut) - 12px));
   }
 }
 @media (max-aspect-ratio: 5/4) {
