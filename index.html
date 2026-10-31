@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Frontera — Photographie</title>
+  <meta name="description" content="Martin Frontera — photographie de rue, de nature et de voyage. Jard-sur-Mer, Vendée.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0a0a09">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body class="is-loading">
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-top mono">
+      <span>Calibrage de l'objectif</span>
+      <span>Lumen 50 — f/1.2</span>
+    </div>
+    <div class="loader-count"><span class="count">000</span></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="flash" aria-hidden="true"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-frame"><i></i><i></i><i></i><i></i><span class="cursor-label mono"></span></div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="logo">M<em>·</em>F</a>
+    <nav class="nav-links mono">
+      <a href="#manifesto">Manifeste</a>
+      <a href="#tunnel">Archives</a>
+      <a href="#series">Séries</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Instagram</a>
+    </nav>
+    <span class="nav-status mono"><i></i>Jard-sur-Mer — Vendée</span>
+  </header>
+
+  <!-- ============ VIEWFINDER HUD ============ -->
+  <div class="hud" aria-hidden="true">
+    <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+    <div class="hud-section mono"><span class="hud-idx">00</span><span class="hud-sep"></span><span class="hud-name">Objectif</span></div>
+    <div class="hud-exif mono">
+      <span>f/<b data-hud="f">16</b></span>
+      <span><b data-hud="s">1/8000</b>s</span>
+      <span>ISO <b data-hud="iso">3200</b></span>
+      <span><b data-hud="mm">24</b>mm</span>
+    </div>
+    <div class="hud-rec mono"><i></i>REC <span class="hud-time">00:00:00</span></div>
+    <div class="hud-meter mono">
+      <span>+2</span><span>·</span><span>+1</span><span>·</span><span>0</span><span>·</span><span>-1</span><span>·</span><span>-2</span>
+      <i class="hud-needle"></i>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ 00 — HERO / LENS ============ -->
+    <section class="hero" id="top" data-section="00|Objectif" data-exif="16|1/8000|3200|24">
+      <div class="hero-photo">
+        <div class="hero-photo-inner">
+          <img class="hp-sharp" alt="Embrasement — coucher de soleil" data-photo="29" data-w="2400">
+          <img class="hp-blur" alt="" data-photo="29" data-w="900">
+        </div>
+        <div class="hero-shade"></div>
+      </div>
+
+      <svg class="lens" viewBox="-130 -130 260 260" aria-hidden="true">
+        <defs>
+          <linearGradient id="gBarrel" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3b3a37"/>
+            <stop offset=".42" stop-color="#121211"/>
+            <stop offset=".68" stop-color="#22211f"/>
+            <stop offset="1" stop-color="#050505"/>
+          </linearGradient>
+          <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2a2927"/>
+            <stop offset=".5" stop-color="#0d0d0c"/>
+            <stop offset="1" stop-color="#1c1b19"/>
+          </linearGradient>
+          <linearGradient id="gBlade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#060606"/>
+            <stop offset=".88" stop-color="#151514"/>
+            <stop offset="1" stop-color="#34322e"/>
+          </linearGradient>
+          <radialGradient id="gCoat" cx=".32" cy=".28" r=".85">
+            <stop offset="0" stop-color="#a68bff" stop-opacity=".42"/>
+            <stop offset=".4" stop-color="#3fd0a8" stop-opacity=".14"/>
+            <stop offset=".75" stop-color="#ff7a3d" stop-opacity=".06"/>
+            <stop offset="1" stop-color="#000" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="gVignette" r=".5">
+            <stop offset=".62" stop-color="#000" stop-opacity="0"/>
+            <stop offset="1" stop-color="#000" stop-opacity=".75"/>
+          </radialGradient>
+          <filter id="fSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+          <clipPath id="cGlass"><circle r="50.6"/></clipPath>
+          <path id="pText" d="M -61.6 0 A 61.6 61.6 0 1 1 61.6 0 A 61.6 61.6 0 1 1 -61.6 0"/>
+        </defs>
+
+        <circle r="126" fill="none" stroke="rgba(236,231,222,.09)" stroke-width=".35" stroke-dasharray="1 2.2"/>
+        <circle r="111" fill="none" stroke="url(#gBarrel)" stroke-width="18"/>
+        <circle r="119.7" fill="none" stroke="#56534d" stroke-width=".5"/>
+        <circle r="102.4" fill="none" stroke="#000" stroke-width=".9"/>
+        <circle cx="0" cy="-111" r="1.9" fill="#ff3b1f"/>
+
+        <g class="ring-scale">
+          <circle r="95" fill="none" stroke="url(#gRing)" stroke-width="14"/>
+          <g class="ticks"></g>
+        </g>
+
+        <g class="ring-focus">
+          <circle r="79" fill="none" stroke="#191918" stroke-width="18"/>
+          <g class="knurl"></g>
+          <circle r="87.8" fill="none" stroke="#000" stroke-width=".8"/>
+          <circle r="70.2" fill="none" stroke="#000" stroke-width=".8"/>
+        </g>
+
+        <g class="ring-text">
+          <circle r="63" fill="none" stroke="#0c0c0b" stroke-width="14"/>
+          <text class="lens-type" font-size="4.4" textLength="384" lengthAdjust="spacing">
+            <textPath href="#pText">LUMEN NOCTA 1:1.2/50 ASPH. · <tspan fill="#ff3b1f">E72</tspan> · No 4 019 863 · MADE FOR THE QUIET LIGHT ·</textPath>
+          </text>
+        </g>
+
+        <circle r="53.2" fill="none" stroke="#030303" stroke-width="5.6"/>
+        <circle r="56.2" fill="none" stroke="#33312d" stroke-width=".5"/>
+
+        <g clip-path="url(#cGlass)">
+          <g class="iris"></g>
+          <circle r="50.6" fill="url(#gVignette)"/>
+          <g class="glass-fx">
+            <circle r="50.6" fill="url(#gCoat)"/>
+            <ellipse class="glint" cx="-18" cy="-26" rx="20" ry="5" fill="#fff" opacity=".2" filter="url(#fSoft)" transform="rotate(-32 -18 -26)"/>
+            <ellipse class="glint2" cx="24" cy="28" rx="6" ry="2" fill="#c9b8ff" opacity=".25" filter="url(#fSoft)" transform="rotate(-32 24 28)"/>
+          </g>
+        </g>
+        <circle r="50.6" fill="none" stroke="#000" stroke-width="1"/>
+      </svg>
+
+      <div class="hero-af" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+      <div class="hero-intro">
+        <p class="hero-eyebrow mono"><span>Photographe</span><span>Depuis 2026</span><span>Jard-sur-Mer, Vendée</span></p>
+        <h1 class="intro-name">
+          <span class="line"><span>Martin</span></span>
+          <span class="line"><em>Frontera</em></span>
+        </h1>
+        <p class="scroll-hint mono"><span class="hint-line"></span>Défilez pour faire la mise au point</p>
+      </div>
+
+      <div class="hero-title">
+        <h2>
+          <span class="line"><span>Capturer</span></span>
+          <span class="line"><em>la lumière</em></span>
+          <span class="line"><span>qui passe.</span></span>
+        </h2>
+        <p class="mono">Rue · Nature · Voyages — Lumière naturelle uniquement</p>
+      </div>
+    </section>
+
+    <!-- ============ 01 — MANIFESTO ============ -->
+    <section class="manifesto" id="manifesto" data-section="01|Manifeste" data-exif="5.6|1/8000|3200|96">
+      <p class="label mono">(01) — Manifeste</p>
+      <p class="focus-text">Je photographie ce qui passe&nbsp;: la lumière rasante sur la côte vendéenne, un goéland qui se pose, une ruelle à l'instant précis où elle oublie qu'on la regarde.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="44">0</b><span class="mono">Images retenues</span></div>
+        <div class="stat"><b data-count="6">0</b><span class="mono">Séries</span></div>
+        <div class="stat"><b data-count="10000" data-prefix="1/">0</b><span class="mono">Ma vitesse la plus rapide</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 — TUNNEL ============ -->
+    <section class="tunnel" id="tunnel" data-section="02|Archives" data-exif="5|1/80|3200|63">
+      <div class="tunnel-stage">
+        <div class="tunnel-world">
+          <div class="t-title">
+            <p class="mono">(02) — Archives</p>
+            <h2>Plongée<br><em>dans les archives</em></h2>
+          </div>
+        </div>
+      </div>
+      <div class="tunnel-caption mono">
+        <span class="tc-idx">00</span><span class="tc-sep">/</span><span class="tc-total">00</span>
+        <span class="tc-name">—</span>
+      </div>
+    </section>
+
+    <!-- ============ 03 — SERIES (horizontal) ============ -->
+    <section class="series" id="series" data-section="03|Séries" data-exif="5.6|1/8000|1000|96">
+      <div class="series-bg-title" aria-hidden="true">Séries — Séries</div>
+      <div class="series-track">
+        <div class="series-intro">
+          <p class="label mono">(03) — Séries</p>
+          <h2>Six histoires<br><em>en lumière naturelle</em></h2>
+          <p class="series-desc">Des séries nées au fil de 2026 : un voyage, une balade sur la côte, une rue qui revient souvent dans le viseur — et la lumière qui décide du reste.</p>
+        </div>
+        <!-- cards injected by main.js -->
+      </div>
+      <div class="series-progress"><i></i></div>
+    </section>
+
+    <!-- ============ 04 — RING ============ -->
+    <section class="ring" id="ring" data-section="04|Instants" data-exif="5.6|1/10000|2000|96">
+      <div class="ring-stage">
+        <div class="ring-tilt"><div class="ring-rot"></div></div>
+      </div>
+      <div class="ring-center">
+        <p class="label mono">(04) — Instants</p>
+        <h2>Fragments<br><em>en orbite</em></h2>
+      </div>
+    </section>
+
+    <!-- ============ 05 — ZOOM / ABOUT ============ -->
+    <section class="zoom" id="about" data-section="05|À propos" data-exif="—|—|—|—">
+      <div class="zoom-grid"></div>
+      <div class="zoom-shade"></div>
+      <div class="zoom-about">
+        <div>
+          <p class="label mono">(05) — À propos</p>
+          <h2>Un boîtier,<br><em>la lumière du jour.</em></h2>
+        </div>
+        <div class="zoom-text">
+          <p>J'ai commencé la photo début 2026, depuis Jard-sur-Mer, en Vendée. Depuis, je photographie ce que je croise : une ruelle à l'ombre, un goéland sur un rocher, une carrosserie qui accroche le soleil. Pas de mise en scène, pas de flash — juste attendre le bon moment.</p>
+          <ul class="gear mono">
+            <li><span>Boîtier</span><span>Canon EOS 50D</span></li>
+            <li><span>Focale fétiche</span><span>96mm (éq. 24×36)</span></li>
+            <li><span>Depuis</span><span>Début 2026</span></li>
+            <li><span>Port d'attache</span><span>Jard-sur-Mer (85)</span></li>
+            <li><span>Sujets</span><span>Rue · Nature · Voyages</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 — CONTACT ============ -->
+    <section class="contact" id="contact" data-section="06|Suivre" data-exif="8|1/250|100|96">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Rue</span><em>✳</em><span>Nature</span><em>✳</em><span>Littoral</span><em>✳</em><span>Voyages</span><em>✳</em><span>Lumière naturelle</span><em>✳</em>
+          <span>Rue</span><em>✳</em><span>Nature</span><em>✳</em><span>Littoral</span><em>✳</em><span>Voyages</span><em>✳</em><span>Lumière naturelle</span><em>✳</em>
+        </div>
+      </div>
+
+      <div class="prints" aria-hidden="true"></div>
+
+      <div class="contact-inner">
+        <p class="label mono">(06) — Suivre</p>
+        <h2 class="contact-title">
+          <span class="line"><span>La suite</span></span>
+          <span class="line"><span><em>se développe</em></span></span>
+          <span class="line"><span>sur Instagram.</span></span>
+        </h2>
+        <div class="contact-row">
+          <button class="shutter" type="button" aria-label="Déclencher l'obturateur" data-cursor="Clic !">
+            <span class="shutter-ring"></span>
+            <span class="shutter-core"></span>
+          </button>
+          <div class="contact-links">
+            <p class="mono shutter-hint">← Appuyez sur le déclencheur</p>
+            <a href="https://www.instagram.com/marti_frt/" class="contact-link" target="_blank" rel="noopener" data-cursor="Ouvrir">@marti_frt <span aria-hidden="true">↗</span></a>
+            <p class="socials mono">Nouvelles images au fil de l'eau — Jard-sur-Mer, Vendée</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer mono">
+        <span>© 2026 Martin Frontera</span>
+        <a href="https://www.instagram.com/marti_frt/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#top" class="to-top">Retour en haut ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" aria-hidden="true">
+    <div class="lb-bg"></div>
+    <img class="lb-img" alt="">
+    <div class="lb-meta mono">
+      <span class="lb-title"></span>
+      <span class="lb-exif"></span>
+    </div>
+    <button class="lb-close mono" type="button" data-cursor="Fermer">Fermer ✕</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js?v=3"></script>
+</body>
+</html>
